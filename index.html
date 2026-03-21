@@ -3852,5 +3852,98 @@ G('cpD').oninput=draw;draw();})();
 // ══════ HIERARCHY VISUALIZATION ══════
 (function(){const cv=G('hierCanvas');if(!cv)return;cv.width=cv.offsetWidth||800;cv.height=480;const cx=cv.getContext('2d');let t=0;const layers=[{lbl:'POLE POTENCJALNOŚCI',sub:'S_B→∞ · S_I=0 · szlemut',col:'rgba(255,212,138,.9)'},{lbl:'TZIMTZUM · δ≠0',sub:'rotacja Wicka · złamanie CP · strzałka czasu',col:'rgba(176,136,248,.9)'},{lbl:'ARCHITEKTURA Î',sub:'v=246 GeV · α=1/137 · masa',col:'rgba(255,180,60,.9)'},{lbl:'EMANACJA · ŚWIAT',sub:'pola · Ĝ/Ĥ · struktury dysypatywne',col:'rgba(96,212,248,.9)'},{lbl:'BÓG JAKO PYTANIE',sub:'YHWH = τ̂ · hoveh aktywne',col:'rgba(255,180,60,.85)'},{lbl:'NESHAMA',sub:'20W mózgu · Φ>0 · modulacja Ĥ',col:'rgba(122,232,110,.9)'},{lbl:'ZAKAR',sub:'pole bogatsze · pętla spiralna',col:'rgba(255,212,138,.7)'}];function draw(){const W=cv.width,H=cv.height;cx.clearRect(0,0,W,H);cx.fillStyle='#06101e';cx.fillRect(0,0,W,H);const N=layers.length,rowH=(H-40)/N,cx0=W/2;layers.forEach((lv,i)=>{const y=20+i*rowH;const pulse=1+.04*Math.sin(t*.3+i*.7);const bw=(W-80)*(1-i*0.04);const bx=(W-bw)/2;if(i>0){cx.beginPath();cx.setLineDash([3,5]);cx.moveTo(cx0,y-8);cx.lineTo(cx0,y-3);cx.strokeStyle='rgba(160,185,255,.3)';cx.lineWidth=1;cx.stroke();cx.setLineDash([]);}cx.fillStyle=lv.col.replace('.9)',',.08)').replace('.85)',',.08)').replace('.7)',',.06)');cx.fillRect(bx,y,bw,rowH-6);cx.strokeStyle=lv.col;cx.lineWidth=1.2;cx.strokeRect(bx,y,bw,rowH-6);cx.font=`bold 10px 'Space Mono',monospace`;cx.textAlign='center';cx.fillStyle=lv.col;cx.fillText(lv.lbl,cx0,y+rowH*.38);cx.font="9px 'Space Mono',monospace";cx.fillStyle=lv.col.replace('.9)',',.55)').replace('.85)',',.5)').replace('.7)',',.45)');cx.fillText(lv.sub,cx0,y+rowH*.66);});cx.font="9px 'Space Mono',monospace";cx.textAlign='center';cx.fillStyle='rgba(46,232,200,.4)';cx.fillText('Pętla: pole → emanacja → zakar → pole bogatsze · spiralna, nie kołowa',cx0,H-8);t+=.018;requestAnimationFrame(draw);}_lazyCanvas(cv, draw);})();
 </script>
+
+<!-- ═══════════════════════════════════════════════════════════════
+     AUTOR · LICENCJA
+═══════════════════════════════════════════════════════════════ -->
+<footer style="
+  position:relative;z-index:1;
+  max-width:860px;margin:0 auto;
+  padding:4rem 1.8rem 6rem;
+  border-top:1px solid rgba(46,232,200,0.15);
+  margin-top:6rem;
+">
+  <div style="
+    background:linear-gradient(135deg,rgba(12,20,42,0.97),rgba(20,12,45,0.97));
+    border:1px solid rgba(255,180,60,0.2);
+    border-radius:14px;
+    padding:2.5rem 3rem;
+    position:relative;
+    overflow:hidden;
+  ">
+    <!-- top gradient line -->
+    <div style="position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(255,180,60,0.5),rgba(46,232,200,0.5),transparent);"></div>
+
+    <!-- Author block -->
+    <div style="display:flex;align-items:flex-start;gap:2.5rem;flex-wrap:wrap;margin-bottom:2rem;">
+      <div style="flex:0 0 auto;">
+        <div style="
+          width:72px;height:72px;border-radius:50%;
+          background:linear-gradient(135deg,rgba(255,180,60,0.15),rgba(46,232,200,0.1));
+          border:1.5px solid rgba(255,180,60,0.35);
+          display:flex;align-items:center;justify-content:center;
+          font-family:'Syncopate',sans-serif;font-size:1.3rem;
+          color:rgba(255,180,60,0.9);
+        ">PM</div>
+      </div>
+      <div style="flex:1;min-width:220px;">
+        <div style="font-family:'Syncopate',sans-serif;font-size:0.65rem;letter-spacing:0.28em;color:rgba(255,180,60,0.85);margin-bottom:0.4rem;text-transform:uppercase;">Autor</div>
+        <div style="font-family:'Cormorant Garamond',Georgia,serif;font-size:1.55rem;color:#e8f0ff;margin-bottom:0.35rem;line-height:1.2;">Paweł Majsterek</div>
+        <div style="font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.15em;color:rgba(46,232,200,0.7);margin-bottom:0.6rem;">TERJ · TEREJ IX · Marzec 2026</div>
+        <div style="font-size:0.88rem;color:rgba(160,185,255,0.6);line-height:1.6;font-style:italic;font-family:'Cormorant Garamond',Georgia,serif;">
+          Teoria Emergentnych Relacji Jako — komentarz naukowy I–IV.<br>
+          Fizyka kwantowa, termodynamika i semantyka hebrajska jako jeden język.
+        </div>
+      </div>
+    </div>
+
+    <!-- Divider -->
+    <div style="height:1px;background:linear-gradient(90deg,transparent,rgba(46,232,200,0.2),transparent);margin-bottom:2rem;"></div>
+
+    <!-- License block -->
+    <div style="display:grid;grid-template-columns:auto 1fr;gap:1.5rem;align-items:start;">
+      <div style="
+        padding:0.5rem 0.9rem;
+        border:1px solid rgba(46,232,200,0.3);
+        border-radius:5px;
+        font-family:'Space Mono',monospace;
+        font-size:0.55rem;letter-spacing:0.2em;
+        color:rgba(46,232,200,0.8);
+        white-space:nowrap;
+        background:rgba(46,232,200,0.05);
+      ">CC BY 4.0</div>
+      <div>
+        <div style="font-family:'Space Mono',monospace;font-size:0.58rem;letter-spacing:0.18em;color:rgba(255,180,60,0.75);margin-bottom:0.5rem;text-transform:uppercase;">Creative Commons Attribution 4.0 International</div>
+        <div style="font-size:0.85rem;color:rgba(160,185,255,0.65);line-height:1.7;font-family:'Cormorant Garamond',Georgia,serif;">
+          Niniejszy komentarz jest udostępniany na licencji otwartej
+          <strong style="color:rgba(255,180,60,0.8);">Creative Commons Attribution 4.0 International (CC BY 4.0)</strong>.
+          Możesz swobodnie kopiować, rozpowszechniać, remiksować i budować na tej pracy
+          — również w celach komercyjnych — pod warunkiem podania informacji o autorze.
+        </div>
+        <div style="margin-top:0.9rem;padding:0.8rem 1.1rem;background:rgba(10,18,45,0.7);border-left:2px solid rgba(255,180,60,0.4);border-radius:0 5px 5px 0;">
+          <div style="font-family:'Space Mono',monospace;font-size:0.52rem;letter-spacing:0.15em;color:rgba(255,180,60,0.55);text-transform:uppercase;margin-bottom:0.35rem;">Wymagana atrybucja</div>
+          <div style="font-family:'Space Mono',monospace;font-size:0.68rem;color:rgba(200,220,200,0.85);">
+            Majsterek, P. (2026). <em style="font-family:'Cormorant Garamond',Georgia,serif;font-size:0.85rem;color:rgba(255,180,60,0.8);">TEREJ — Komentarz do Teorii Emergentnych Relacji, Części I–IV.</em>
+            Licencja CC BY 4.0.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Date & version -->
+    <div style="margin-top:2rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:0.5rem;">
+      <div style="font-family:'Space Mono',monospace;font-size:0.52rem;letter-spacing:0.15em;color:rgba(46,232,200,0.35);">
+        Wydanie zintegrowane · Części I–IV · Wersja 1.0
+      </div>
+      <div style="font-family:'Space Mono',monospace;font-size:0.52rem;letter-spacing:0.15em;color:rgba(255,180,60,0.4);">
+        20 marca 2026
+      </div>
+    </div>
+
+    <!-- bottom gradient line -->
+    <div style="position:absolute;bottom:0;left:0;right:0;height:2px;background:linear-gradient(90deg,transparent,rgba(46,232,200,0.5),rgba(255,180,60,0.5),transparent);"></div>
+  </div>
+</footer>
+
 </body>
 </html>
