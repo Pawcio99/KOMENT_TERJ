@@ -123,8 +123,8 @@ nav a.active { color:var(--amber); }
   background:linear-gradient(135deg, rgba(46,232,200,0.04), rgba(255,180,60,0.06));
   opacity:0; transition:opacity 0.3s; pointer-events:none;
 }
-.terej-link-card:hover { 
-  border-color:rgba(255,180,60,0.5); 
+.terej-link-card:hover {
+  border-color:rgba(255,180,60,0.5);
   box-shadow:0 12px 60px rgba(0,0,0,0.6), 0 0 30px rgba(255,180,60,0.1);
   transform:translateY(-3px);
 }
@@ -1271,7 +1271,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;heigh
   </div>
 
   <blockquote>
-    <p>Komplementarność $[\hat{G}, \hat{H}] \neq 0$ jest fizyczną treścią ontologicznej tezy TERJ: pełna potencjalność i określona forma są wzajemnie wykluczające się w sensie Heisenberga — tak jak pozycja i pęd cząstki. Nie można mieć jednocześnie pełnego otwarcia i pełnej formy.</p>
+    <p>$[\hat{G}, \hat{H}] \neq 0$ — Ĝ i Ĥ nie komutują: nie mają wspólnej bazy własnej. To fakt algebraiczny, nie jeszcze komplementarność w sensie Heisenberga. Pełna komplementarność wymaga relacji Robertsona $\Delta\hat{G}\cdot\Delta\hat{H} \geq \tfrac{1}{2}|\langle[\hat{G},\hat{H}]\rangle|$, wyprowadzonej na konkretnej przestrzeni Hilberta — której TERJ na tym etapie nie definiuje. Do czasu tej definicji „komplementarność Ĝ/Ĥ" jest hipotezą roboczą, nie wyprowadzonym wynikiem.</p>
   </blockquote>
 
   <div class="part-nav">
@@ -1584,7 +1584,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;heigh
 
   <p>Nie istnieje jeden absolutny stan układu. Istnieje nieskończenie wiele stanów relacyjnych — po jednym dla każdej możliwej pary (system, obserwator). Kolaps funkcji falowej nie jest zdarzeniem absolutnym — jest zmianą relacji.</p>
 
-  <div class="snote"><p>Relacyjna QM nie jest interpretacją "piękną, ale niesprawdzalną". Ma specyficzne, testowalne konsekwencje dla korelacji między obserwatorami — i jest zgodna ze wszystkimi dotychczasowymi wynikami eksperymentalnymi. Jej kluczowe twierdzenie: nie ma "widoku z zewnątrz" — każdy opis jest opisem relacji.</p></div>
+  <div class="snote"><p>Zastrzeżenie: RQM jest jedną z kilku interpretacji QM empirycznie nierozróżnialnych od siebie (obok Bohma, QBismu, Kopenhagi, Everetta), z aktywną, nierozstrzygniętą krytyką techniczną — Brukner (2021, "Qubits are not observers — a no-go theorem") pokazuje, że stan relatywny w RQM nie może reprezentować "wiedzy obserwatora" bez rozwiązania problemu preferowanej bazy; Pienaar (2021, "A quintet of quandaries") dodaje pięć dalszych twierdzeń no-go. Rovelli i Di Biagio odpowiedzieli (2022), spór trwa w literaturze. TERJ opiera się tu na jednej stronie żywej debaty, nie na ustalonym konsensusie.</p></div>
 
   <div class="discovery">
     <span class="disc-title">Odkrycie strukturalne: Ĝ jako operator relacyjny — nie absolutny</span>
@@ -1922,9 +1922,11 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;heigh
     </div>
   </div>
 
+  <div class="snote"><p>Zastrzeżenie metodologiczne: $S_B$ (Bekenstein-Hawking, $S=k_BA/4\ell_P^2$) i $S_I$ (Shannon) nie są dwoma niezależnymi wielkościami, które akurat wskazują w różne strony — to ta sama formuła entropii zastosowana do dwóch wyborów podziału (coarse-grainingu) tej samej przestrzeni stanów. Entropia jest z definicji zależna od wybranego makrostanu/obserwatora (zob. Bekenstein-Hawking i holografia: czarna dziura maksymalizuje obie jednocześnie, bo to jeden formalizm, nie dwa). Właściwsze sformułowanie tego rozdziału: pole potencjalności nie ma ustalonego coarse-grainingu, więc pytanie o jego entropię jest nierozstrzygnięte, dopóki nie wybierze się obserwatora/podziału — nie: „ma dwie entropie naraz".</p></div>
+
   <div class="fbox" data-label="Dwa rodzaje entropii · Pole potencjalności">
     $$S_{\text{Boltzmann}} = k_B \ln \Omega \to \infty \qquad S_{\text{informacyjna}} = 0$$
-    <span class="fcomment">Pole potencjalności jest jednocześnie termodynamicznie „nieuporządkowane" (wysokie $S_B$, bo wszystkie stany równoważne) i informacyjnie „niezniszczone" ($S_I = 0$, bo żaden wybór nie wykreślił żadnej możliwości). Ten paradoks — dwie miary wskazujące w różnych kierunkach — jest strukturą pola potencjalności, nie sprzecznością.</span>
+    <span class="fcomment">Precyzyjniej: $S_B\to\infty$ i $S_I=0$ opisują ten sam brak wyróżnionego podziału widziany z dwóch stron formalizmu — nie dwie ontologicznie odrębne wielkości. Wybór obserwatora/partycji determinuje którą wartość entropii się liczy.</span>
   </div>
 
   <div class="sec-title">§ Czas urojony — fizyczna realizacja stanu bez strzałki</div>
@@ -2265,7 +2267,7 @@ input[type=range]::-webkit-slider-thumb{-webkit-appearance:none;width:12px;heigh
     <div class="theorem"><span class="theorem-n">T4 — MASA JEST RELACJĄ</span><span class="theorem-body">$m_f = y_f v/\sqrt{2}$ — <strong>masa jest iloczynem stałej Yukawy i wartości oczekiwanej próżni Higgsa.</strong> Jest geometrycznym przesunięciem bieguna propagatora z $k^2=0$ (foton) do $p^2=m^2$ (fermion). Nie jest własnością cząstki samej w sobie — jest odciskiem architektury $\hat{I}$ na każdej linii wirtualnej.</span></div>
     <div class="theorem"><span class="theorem-n">T5 — STRZAŁKA CZASU WYŁANIA SIĘ Z ZŁAMANIA SYMETRII</span><span class="theorem-body"><strong>Faza $\delta \approx 1.2$ rad w macierzy CKM jest fizyczną realizacją tzimtzum.</strong> Doskonała symetria CP = kairos bez strzałki = szlemut. Złamanie CP = hayah ≠ yihyeh = chronos = historia = zakar możliwe. To jest pierwsza nieobojętność wpisana w tkankę naszego Wszechświata.</span></div>
     <div class="theorem"><span class="theorem-n">T6 — JĘZYK JEST ARCHITEKTURĄ</span><span class="theorem-body"><strong>Słowo jest operatorem otwierającym gradient w przestrzeni fazowej myślenia.</strong> Zero — brak słowa — wyklucza gradient. YHWH jako Szem ha-Mephorasz: zakaz wymawiania = zakaz kolapsowania nieskończonego $\Omega$ do jednego mikrostanu. Osiem słów na miłość = osiem wymiarów przestrzeni relacyjnej, nie osiem nazw jednej rzeczy.</span></div>
-    <div class="theorem"><span class="theorem-n">T7 — POLE MA $S_B \to \infty$ I $S_I = 0$ JEDNOCZEŚNIE</span><span class="theorem-body">Nie jest to sprzeczność. $S_B$ mierzy liczbę dostępnych stanów — wszystkie są równoważne. $S_I$ mierzy utratę przez wybory — żaden wybór jeszcze nie padł. <strong>Szlemut absolutna: pełność bez przeżycia.</strong> Pole zawiera $\hat{\varepsilon}$ jako zasadę — ale nie zawiera historii konkretnej relacji.</span></div>
+    <div class="theorem"><span class="theorem-n">T7 — POLE MA $S_B \to \infty$ I $S_I = 0$ JEDNOCZEŚNIE</span><span class="theorem-body">Nie jest to sprzeczność, ale też nie dwie odrębne kategorie: $S_B$ i $S_I$ to jeden formalizm entropii przy dwóch wyborach partycji/coarse-grainingu tej samej przestrzeni stanów, nie dwie niezależne wielkości. Bez ustalonego podziału pytanie o entropię pola jest nierozstrzygnięte. <strong>Szlemut absolutna: pełność bez przeżycia.</strong> Pole zawiera $\hat{\varepsilon}$ jako zasadę — ale nie zawiera historii konkretnej relacji.</span></div>
     <div class="theorem"><span class="theorem-n">T8 — NESHAMA JAKO MODULATOR WŁASNEGO $\hat{H}$</span><span class="theorem-body"><strong>Neshama jest jedyną strukturą dysypatywną która może modulować własne warunki brzegowe.</strong> $\hat{H}_{\text{neshama}}(t+\delta t) = \hat{H}_{\text{neshama}}(t) + \delta\hat{H}[\text{wybór}(t)]$. Każdy wybór moralny zmienia $\hat{H}$ neshamy. Teshuvah jest bifurkacją w przestrzeni fazowej neshamy — nie cofnięciem, lecz zmianą kierunku Ĝ przy zachowaniu historii przez zakar.</span></div>
   </div>
 
@@ -2616,7 +2618,7 @@ function initHiggs() {
       const vMax = Math.max(V(2,0,mu2,lam), V(0,2,mu2,lam));
       const t = (avgZ - vMin) / (vMax - vMin + 0.001);
       const clampt = Math.max(0, Math.min(1, t));
-      
+
       // Color: deep teal (low energy/min) → amber (high) → rose (very high)
       let r,g,b;
       if(clampt < 0.3) {
@@ -2733,11 +2735,11 @@ let partRAF = null;
       const phY = H * 0.38;
       phTrail.push({x: phX, y: phY});
       if(phTrail.length > 60) phTrail.shift();
-      
+
       cx.beginPath();
       phTrail.forEach((p,i) => i===0 ? cx.moveTo(p.x,p.y) : cx.lineTo(p.x,p.y));
       cx.strokeStyle = `rgba(255,200,60,0.7)`; cx.lineWidth = 1.5; cx.stroke();
-      
+
       cx.save();
       cx.translate(phX, phY);
       const pglow = cx.createRadialGradient(0,0,0,0,0,10);
@@ -2894,7 +2896,7 @@ let partRAF = null;
     const n = +G('oN').value;
     const theta = G('oTheta').value * Math.PI/180;
     const density = +G('oDens').value;
-    
+
     cx.clearRect(0,0,W,H);
     cx.fillStyle='#07101e'; cx.fillRect(0,0,W,H);
 
@@ -2906,7 +2908,7 @@ let partRAF = null;
       const phi_rand = Math.random() * TAU;
       const theta_rand = Math.acos(2*Math.random()-1);
       const r_rand = Math.random() * n * 4;
-      
+
       const prob = psi2(r_rand, n);
       if(Math.random() > prob * 5) continue;
 
@@ -2921,11 +2923,11 @@ let partRAF = null;
       const tilt = 0.4;
       const sx = cx0 + x2 * scale;
       const sy = cy0 + (y3*Math.cos(tilt) - z2*Math.sin(tilt)) * scale;
-      
+
       const depth = z2;
       const alpha = 0.25 + 0.2 * (depth / (n*4));
       const hue = 185 + 60 * (r_rand / (n*4));
-      
+
       cx.beginPath();
       cx.arc(sx, sy, 1.2, 0, TAU);
       cx.fillStyle = `hsla(${hue},70%,65%,${Math.max(0.05, alpha)})`;
@@ -2996,11 +2998,11 @@ let partRAF = null;
       const E = -13.6 / (n*n);
       const eMin = -13.6, eMax = -13.6/(maxN*maxN);
       const ly = H*0.85 - (E - eMin)/(eMax - eMin) * H * 0.65;
-      
+
       cx.beginPath(); cx.moveTo(levX, ly); cx.lineTo(levX + levW, ly);
       cx.strokeStyle = n===n1 ? 'rgba(255,180,60,0.9)' : n===n2 ? 'rgba(248,100,100,0.9)' : 'rgba(160,185,255,0.3)';
       cx.lineWidth = n===n1||n===n2 ? 2 : 0.8; cx.stroke();
-      
+
       cx.font = "9px 'Space Mono',monospace"; cx.textAlign='left';
       cx.fillStyle = 'rgba(160,185,255,0.6)';
       cx.fillText(`n=${n}  ${E.toFixed(1)}eV`, levX + levW + 8, ly + 3);
@@ -3012,30 +3014,30 @@ let partRAF = null;
       const eMin = -13.6, eMax = -13.6/(maxN*maxN);
       const ly1 = H*0.85 - (E1-eMin)/(eMax-eMin)*H*0.65;
       const ly2 = H*0.85 - (E2-eMin)/(eMax-eMin)*H*0.65;
-      
+
       cx.beginPath(); cx.moveTo(levX+levW/2, ly1); cx.lineTo(levX+levW/2, ly2);
       cx.strokeStyle='rgba(255,180,60,0.6)'; cx.lineWidth=1.5;
       cx.setLineDash([4,4]); cx.stroke(); cx.setLineDash([]);
-      
+
       // Wavelength calculation
       const lnm = 1e9 / (RH * (1/(n2*n2) - 1/(n1*n1)));
       const col = wavelengthToRGB(lnm);
-      
+
       // Photon flying out
       const phX0 = levX + levW * 0.6;
       const phY0 = (ly1 + ly2) / 2;
       const phX = phX0 + ((t*0.8) % (W - phX0));
-      
+
       cx.beginPath();
       for(let x = phX0; x <= phX; x += 2) {
         const wave = Math.sin((x-phX0)*0.18) * 12;
         x===phX0 ? cx.moveTo(x, phY0+wave) : cx.lineTo(x, phY0+wave);
       }
       cx.strokeStyle = col; cx.lineWidth = 2.2; cx.stroke();
-      
+
       cx.beginPath(); cx.arc(phX, phY0 + Math.sin((phX-phX0)*0.18)*12, 6, 0, TAU);
       cx.fillStyle = col; cx.fill();
-      
+
       cx.font="11px 'Space Mono',monospace"; cx.textAlign='left';
       cx.fillStyle = col;
       cx.fillText(`λ = ${lnm > 0 ? ~~lnm : '∞'} nm`, phX0 + 20, phY0 - 22);
@@ -3205,7 +3207,7 @@ let partRAF = null;
       cx.beginPath(); cx.arc(cx0,cy0,r,0,TAU);
       cx.strokeStyle=`rgba(46,232,200,${0.12+0.04*n})`;
       cx.lineWidth=1; cx.stroke();
-      
+
       cx.font="9px 'Space Mono',monospace"; cx.textAlign='left';
       cx.fillStyle=`rgba(46,232,200,${0.4+n*0.08})`;
       cx.fillText(`n=${n}`, cx0+r+4, cy0+3);
@@ -3455,16 +3457,16 @@ function draw(){
   // Deep space background
   cx.fillStyle='#050a14';
   cx.fillRect(0,0,W,H);
-  
+
   const N=levels.length;
   const PAD_TOP=20, PAD_BOT=30, PAD_H=12;
   const rowH=Math.floor((H-PAD_TOP-PAD_BOT)/N);
-  
+
   levels.forEach((lv,i)=>{
     const y=PAD_TOP+i*rowH;
     const pulse=0.5+0.5*Math.sin(t*0.4+i*0.9);
     const rectH=rowH-PAD_H;
-    
+
     // Arrow connector
     if(i>0){
       const arrX=W/2, arrY=y-2;
@@ -3473,7 +3475,7 @@ function draw(){
       cx.strokeStyle=`rgba(46,232,200,${0.25+0.2*pulse})`;
       cx.lineWidth=1.5;cx.stroke();
     }
-    
+
     // Row background with gradient
     const grad=cx.createLinearGradient(20,y,W-20,y);
     grad.addColorStop(0, lv.col+'22');
@@ -3483,31 +3485,31 @@ function draw(){
     cx.beginPath();
     cx.roundRect(20,y,W-40,rectH,4);
     cx.fill();
-    
+
     // Border
     cx.strokeStyle=lv.col+Math.round((40+30*pulse)).toString(16).padStart(2,'0');
     cx.lineWidth=1.5;
     cx.beginPath();cx.roundRect(20,y,W-40,rectH,4);cx.stroke();
-    
+
     // Left accent bar
     cx.fillStyle=lv.col;
     cx.fillRect(20,y,3,rectH);
-    
+
     const midY=y+rectH/2;
     const colW=(W-40)/3;
-    
+
     // LEVEL LABEL (left column)
     cx.font=`bold 11px 'Space Mono',monospace`;
     cx.textAlign='left';
     cx.fillStyle=lv.col;
     cx.fillText(lv.lbl, 32, midY-6);
-    
+
     // Divider
     cx.strokeStyle=lv.col+'33';
     cx.lineWidth=0.8;
     cx.beginPath();cx.moveTo(20+colW,y+4);cx.lineTo(20+colW,y+rectH-4);cx.stroke();
     cx.beginPath();cx.moveTo(20+colW*2,y+4);cx.lineTo(20+colW*2,y+rectH-4);cx.stroke();
-    
+
     // Ĝ (middle column)
     cx.font=`10px 'Space Mono',monospace`;
     cx.textAlign='center';
@@ -3516,7 +3518,7 @@ function draw(){
     cx.font=`9px 'Space Mono',monospace`;
     cx.fillStyle='rgba(255,200,100,0.75)';
     cx.fillText(lv.g, 20+colW*1.5, midY+6);
-    
+
     // Ĥ (right column)
     cx.font=`10px 'Space Mono',monospace`;
     cx.fillStyle='rgba(176,136,248,0.9)';
@@ -3525,13 +3527,13 @@ function draw(){
     cx.fillStyle='rgba(200,170,255,0.75)';
     cx.fillText(lv.h, 20+colW*2.5, midY+6);
   });
-  
+
   // Footer
   cx.font="10px 'Space Mono',monospace";
   cx.textAlign='center';
   cx.fillStyle='rgba(46,232,200,0.5)';
   cx.fillText('Planck → Higgs → Kwant → Termo → Biologia → Kognicja → Semantyka',W/2,H-8);
-  
+
   t+=0.02;
   requestAnimationFrame(draw);
 }
@@ -3632,12 +3634,12 @@ function draw(){
   cx.clearRect(0,0,W,H);
   cx.fillStyle='#06101e';
   cx.fillRect(0,0,W,H);
-  
+
   const tval=G('deT').value/100;
   const C=+G('deC').value;
   G('deTv').textContent=G('deT').value;
   G('deCv').textContent=C;
-  
+
   // Root node: SZLEMUT / Pole potencjalności
   const rootX=W/2, rootY=52, rootR=22;
   const rootGrad=cx.createRadialGradient(rootX,rootY,0,rootX,rootY,rootR);
@@ -3653,31 +3655,31 @@ function draw(){
   cx.fillStyle='rgba(255,212,138,0.95)';
   cx.fillText('SZLEMUT',rootX,rootY);
   cx.textBaseline='alphabetic';
-  
+
   // Calculate visible depth from slider
   const depth=Math.max(1, Math.min(Math.round(tval*C), C));
-  
+
   // Draw tree branches recursively with proper bounds
   const availH = H - rootY - rootR - 30;
   const lenBase = availH / depth * 0.85;
-  
+
   function branch(x,y,d,angle,len){
     if(d<=0||len<3)return;
     const ex=x+Math.cos(angle)*len;
     const ey=y+Math.sin(angle)*len;
     // Clip to canvas
     if(ey>H-25||ey<0)return;
-    
+
     const progress=(C-d+1)/C;
     const alpha=0.2+progress*0.7;
     const hue=185+d*22;
-    
+
     // Line
     cx.beginPath();cx.moveTo(x,y);cx.lineTo(ex,ey);
     cx.strokeStyle=`hsla(${hue},75%,65%,${alpha})`;
     cx.lineWidth=Math.max(0.5, d*0.6);
     cx.stroke();
-    
+
     // Node
     const r=Math.max(3, 4+d*0.5);
     cx.beginPath();cx.arc(ex,ey,r,0,TAU);
@@ -3685,7 +3687,7 @@ function draw(){
     ng.addColorStop(0,`hsla(${hue},80%,70%,${alpha*0.9})`);
     ng.addColorStop(1,`hsla(${hue},80%,50%,0)`);
     cx.fillStyle=ng;cx.fill();
-    
+
     // Label
     if(len>15){
       cx.font="8px 'Space Mono',monospace";
@@ -3693,17 +3695,17 @@ function draw(){
       cx.fillStyle=`hsla(${hue},80%,80%,${alpha})`;
       cx.fillText(`ε̂${d}`,ex, ey-r-2);
     }
-    
+
     branch(ex,ey,d-1,angle-Math.PI/5,len*0.7);
     branch(ex,ey,d-1,angle+Math.PI/5,len*0.7);
     if(d>1) branch(ex,ey,d-1,angle,len*0.55);
   }
-  
+
   if(depth>0){
     branch(rootX, rootY+rootR, depth, -Math.PI/2+Math.PI/6, lenBase);
     branch(rootX, rootY+rootR, depth, -Math.PI/2-Math.PI/6, lenBase);
   }
-  
+
   // Status bar
   cx.font="10px 'Space Mono',monospace";
   cx.textAlign='center';cx.textBaseline='alphabetic';
@@ -3770,7 +3772,7 @@ G('cpD').oninput=draw;draw();})();
   cv.width=cv.offsetWidth||800;cv.height=360;
   const cx=cv.getContext('2d');
   let t=0, rafId=null;
-  
+
   function proj(x,y,z,rot){
     const cosR=Math.cos(rot),sinR=Math.sin(rot);
     const px=x*cosR-y*sinR,py2=x*sinR+y*cosR;
@@ -3778,17 +3780,17 @@ G('cpD').oninput=draw;draw();})();
     return{sx:cv.width/2+px*70,sy:cv.height/2+pz*70+py2*Math.sin(tilt)*70,depth:py2+pz};
   }
   function V(phi,mu2){return-mu2*phi*phi+phi*phi*phi*phi*.25;}
-  
+
   function draw(){
     const W=cv.width,H=cv.height;
     cx.clearRect(0,0,W,H);
     cx.fillStyle='#06101e';cx.fillRect(0,0,W,H);
-    
+
     const mu2=(G('hgM').value/100)*.8;
     const rot=G('hgR').value/180*Math.PI+t*.005;
     G('hgMv').textContent=G('hgM').value;
     G('hgRv').textContent=Math.round(rot*180/Math.PI%360)+'°';
-    
+
     const N=20,pmax=2;
     const cells=[];
     let Vmin=Infinity,Vmax=-Infinity;
@@ -3824,7 +3826,7 @@ G('cpD').oninput=draw;draw();})();
       cx.fillStyle=`hsla(${h},70%,${l}%,0.85)`;cx.fill();
       cx.strokeStyle=`hsla(${h},60%,${l}%,0.12)`;cx.lineWidth=.3;cx.stroke();
     });
-    
+
     // Text AFTER surface, with background for readability
     const label=mu2<.02
       ? 'μ²≈0: jedno minimum φ=0 · symetria zachowana · kairos'
@@ -3837,15 +3839,15 @@ G('cpD').oninput=draw;draw();})();
     cx.fillRect(W/2-tw/2-8,6,tw+16,20);
     cx.fillStyle='rgba(255,180,60,0.85)';
     cx.fillText(label,W/2,20);
-    
+
     t+=.01;
     rafId=requestAnimationFrame(draw);
   }
-  
+
   // Slider handlers - DON'T restart RAF, just let existing loop pick up new values
   G('hgM').oninput=()=>{};  // RAF loop reads value each frame
   G('hgR').oninput=()=>{};  // same
-  
+
   _lazyCanvas(cv, draw);
 })();
 
